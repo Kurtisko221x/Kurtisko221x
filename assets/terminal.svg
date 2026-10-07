@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 440" width="420" height="440">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d0a1f"/>
+      <stop offset="1" stop-color="#1a0b3d"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .t { font: 13px 'Consolas', 'Courier New', monospace; fill: #e0d7ff; white-space: pre; }
+    .p { fill: #e100ff; } .c { fill: #7dd3fc; } .ok { fill: #4ade80; } .dim { fill: #8b7fb8; } .y { fill: #ffd166; }
+    .line { opacity: 0; animation: show 16s steps(1) infinite; }
+    @keyframes k0 { 0%,0.00% { opacity: 0 } 0.10%,95% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes k1 { 0%,7.50% { opacity: 0 } 7.60%,95% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes k2 { 0%,13.75% { opacity: 0 } 13.85%,95% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes k3 { 0%,20.00% { opacity: 0 } 20.10%,95% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes k4 { 0%,23.75% { opacity: 0 } 23.85%,95% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes k5 { 0%,27.50% { opacity: 0 } 27.60%,95% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes k6 { 0%,32.50% { opacity: 0 } 32.60%,95% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes k7 { 0%,35.00% { opacity: 0 } 35.10%,95% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes k8 { 0%,46.25% { opacity: 0 } 46.35%,95% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes k9 { 0%,52.50% { opacity: 0 } 52.60%,95% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes k10 { 0%,58.75% { opacity: 0 } 58.85%,95% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes k11 { 0%,66.25% { opacity: 0 } 66.35%,95% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes k12 { 0%,72.50% { opacity: 0 } 72.60%,95% { opacity: 1 } 96%,100% { opacity: 0 } }
+    .cur { fill: #c77dff; animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0 } }
+    .bar { animation: load 16s linear infinite; transform-origin: 0 0; }
+    @keyframes load { 0%,35% { transform: scaleX(0) } 46%,100% { transform: scaleX(1) } }
+  </style>
+
+  <rect x="1" y="1" width="418" height="438" rx="14" fill="url(#bg)" stroke="#7f00ff" stroke-width="1.5"/>
+  <rect x="1" y="1" width="418" height="34" rx="14" fill="#16112e"/>
+  <rect x="1" y="22" width="418" height="13" fill="#16112e"/>
+  <circle cx="22" cy="18" r="6" fill="#ff5f57"/><circle cx="42" cy="18" r="6" fill="#febc2e"/><circle cx="62" cy="18" r="6" fill="#28c840"/>
+  <text class="t dim" x="210" y="22" text-anchor="middle">wraith@vibe: ~/projects</text>
+
+  <g>
+    <text class="t line" x="18" y="66" style="animation-name:k0"><tspan class="p">❯</tspan> claude "build me something insane"</text>
+    <text class="t line" x="18" y="92" style="animation-name:k1"><tspan class="dim">●</tspan> reading the vibes...</text>
+    <text class="t line" x="18" y="114" style="animation-name:k2"><tspan class="dim">●</tspan> planning architecture</text>
+    <text class="t line" x="18" y="136" style="animation-name:k3"><tspan class="c">+</tspan> src/agent.ts      <tspan class="ok">+214</tspan></text>
+    <text class="t line" x="18" y="158" style="animation-name:k4"><tspan class="c">+</tspan> src/server.ts     <tspan class="ok">+132</tspan></text>
+    <text class="t line" x="18" y="180" style="animation-name:k5"><tspan class="c">+</tspan> src/ui/App.tsx    <tspan class="ok">+389</tspan></text>
+
+    <text class="t line" x="18" y="212" style="animation-name:k6"><tspan class="p">❯</tspan> npm run build</text>
+    <g class="line" style="animation-name:k7">
+      <rect x="18" y="222" width="300" height="10" rx="5" fill="#2a1f4a"/>
+      <rect class="bar" x="18" y="222" width="300" height="10" rx="5" fill="#c77dff"/>
+    </g>
+    <text class="t line" x="18" y="254" style="animation-name:k8"><tspan class="ok">✓</tspan> built in 1.37s · 0 errors</text>
+
+    <text class="t line" x="18" y="286" style="animation-name:k9"><tspan class="p">❯</tspan> git push origin main</text>
+    <text class="t line" x="18" y="308" style="animation-name:k10"><tspan class="ok">✓</tspan> deployed → <tspan class="c">vibe.app</tspan></text>
+
+    <text class="t line" x="18" y="344" style="animation-name:k11"><tspan class="y">★</tspan> idea → prod in <tspan class="y">47 min</tspan></text>
+    <text class="t line" x="18" y="370" style="animation-name:k12"><tspan class="dim">// next idea loading...</tspan></text>
+    <text class="t" x="18" y="408"><tspan class="p">❯</tspan></text>
+    <rect class="cur" x="34" y="397" width="8" height="15"/>
+  </g>
+</svg>

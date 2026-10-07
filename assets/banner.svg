@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#07051a"/>
+      <stop offset="0.62" stop-color="#1a0b3d"/>
+      <stop offset="1" stop-color="#3a0d5c"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd166"/>
+      <stop offset="0.5" stop-color="#ff4fa3"/>
+      <stop offset="1" stop-color="#7f00ff"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c77dff"/>
+      <stop offset="0.5" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e100ff"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-1 0;1 0;-1 0" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+    <clipPath id="sunClip">
+      <rect x="0" y="0" width="1200" height="196"/>
+    </clipPath>
+    <filter id="glow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="#000" opacity="0.18"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .star { fill: #fff; animation: twinkle 3s ease-in-out infinite; }
+    .s2 { animation-delay: 1s; } .s3 { animation-delay: 2s; }
+    @keyframes twinkle { 0%,100% { opacity: .15 } 50% { opacity: .9 } }
+
+    .grid line { stroke: #e100ff; stroke-width: 1.4; opacity: .55; }
+    .hz { animation: roll 1.6s linear infinite; }
+    @keyframes roll { from { transform: translateY(0) } to { transform: translateY(16px) } }
+
+    .glitch { font: 900 92px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; letter-spacing: 10px; }
+    .g1 { fill: #00f0ff; opacity: .7; animation: g1 3.2s steps(1) infinite; }
+    .g2 { fill: #ff2bd6; opacity: .7; animation: g2 3.2s steps(1) infinite; }
+    @keyframes g1 { 0%,86%,100% { transform: translate(0,0) } 88% { transform: translate(-6px,2px) } 92% { transform: translate(4px,-3px) } 96% { transform: translate(-2px,1px) } }
+    @keyframes g2 { 0%,86%,100% { transform: translate(0,0) } 88% { transform: translate(6px,-2px) } 92% { transform: translate(-4px,3px) } 96% { transform: translate(2px,-1px) } }
+
+    .sub { font: 600 17px 'Consolas', 'Courier New', monospace; fill: #e0d7ff; letter-spacing: 3px; }
+    .cursor { fill: #e100ff; animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0 } }
+
+    .float { animation: float 5s ease-in-out infinite; }
+    @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-6px) } }
+  </style>
+
+  <rect width="1200" height="320" fill="url(#sky)"/>
+
+  <!-- stars -->
+  <g>
+    <circle class="star" cx="80" cy="40" r="1.4"/><circle class="star s2" cx="190" cy="90" r="1"/>
+    <circle class="star s3" cx="300" cy="30" r="1.6"/><circle class="star" cx="420" cy="70" r="1"/>
+    <circle class="star s2" cx="760" cy="36" r="1.3"/><circle class="star s3" cx="880" cy="84" r="1"/>
+    <circle class="star" cx="990" cy="28" r="1.5"/><circle class="star s2" cx="1110" cy="66" r="1.1"/>
+    <circle class="star s3" cx="640" cy="20" r="1"/><circle class="star" cx="540" cy="110" r=".9"/>
+    <circle class="star s2" cx="40" cy="130" r="1"/><circle class="star s3" cx="1160" cy="140" r="1.2"/>
+  </g>
+
+  <!-- retro sun -->
+  <g clip-path="url(#sunClip)">
+    <circle cx="600" cy="196" r="120" fill="url(#sun)" opacity=".9" filter="url(#glow)"/>
+    <g fill="#1a0b3d">
+      <rect x="470" y="150" width="260" height="4"/>
+      <rect x="470" y="164" width="260" height="6"/>
+      <rect x="470" y="178" width="260" height="8"/>
+      <rect x="470" y="190" width="260" height="10"/>
+    </g>
+  </g>
+
+  <!-- perspective grid floor -->
+  <g class="grid">
+    <rect x="0" y="196" width="1200" height="124" fill="#12062b"/>
+    <line x1="0" y1="196" x2="1200" y2="196" style="opacity:1;stroke-width:2"/>
+    <g class="hz">
+      <line x1="0" y1="204" x2="1200" y2="204"/><line x1="0" y1="216" x2="1200" y2="216"/>
+      <line x1="0" y1="232" x2="1200" y2="232"/><line x1="0" y1="252" x2="1200" y2="252"/>
+      <line x1="0" y1="276" x2="1200" y2="276"/><line x1="0" y1="304" x2="1200" y2="304"/>
+    </g>
+    <line x1="600" y1="196" x2="600" y2="320"/>
+    <line x1="600" y1="196" x2="480" y2="320"/><line x1="600" y1="196" x2="720" y2="320"/>
+    <line x1="600" y1="196" x2="340" y2="320"/><line x1="600" y1="196" x2="860" y2="320"/>
+    <line x1="600" y1="196" x2="180" y2="320"/><line x1="600" y1="196" x2="1020" y2="320"/>
+    <line x1="600" y1="196" x2="-20" y2="320"/><line x1="600" y1="196" x2="1220" y2="320"/>
+    <line x1="600" y1="196" x2="-300" y2="320"/><line x1="600" y1="196" x2="1500" y2="320"/>
+  </g>
+
+  <!-- title -->
+  <g class="float">
+    <text class="glitch g1" x="600" y="128" text-anchor="middle">KURTISKO</text>
+    <text class="glitch g2" x="600" y="128" text-anchor="middle">KURTISKO</text>
+    <text class="glitch" x="600" y="128" text-anchor="middle" fill="url(#title)" filter="url(#glow)">KURTISKO</text>
+  </g>
+
+  <!-- subtitle bar -->
+  <rect x="290" y="250" width="620" height="40" rx="8" fill="#07051a" opacity=".75" stroke="#7f00ff" stroke-width="1.5"/>
+  <text class="sub" x="600" y="276" text-anchor="middle">VIBE CODER · AI BUILDER · FULL-STACK · SK</text>
+  <rect class="cursor" x="892" y="262" width="9" height="18"/>
+
+  <rect width="1200" height="320" fill="url(#scan)"/>
+</svg>
